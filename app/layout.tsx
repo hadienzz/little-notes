@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Quicksand, Dancing_Script } from "next/font/google";
+
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -30,6 +32,7 @@ export default function RootLayout({
         className={`${quicksand.variable} ${dancingScript.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
